@@ -1,0 +1,204 @@
+// ========================================
+// MOBILE RESPONSIVE STYLES
+// ========================================
+
+@include mobile-only {
+
+    // Typography adjustments
+    h1 {
+        font-size: $font-size-3xl;
+    }
+
+    h2 {
+        font-size: $font-size-2xl;
+    }
+
+    h3 {
+        font-size: $font-size-xl;
+    }
+
+    // Section padding
+    section {
+        padding: $spacing-2xl 0;
+    }
+
+    // Hero section
+    .hero {
+        min-height: 450px;
+
+        h1 {
+            font-size: $font-size-3xl;
+        }
+
+        p {
+            font-size: $font-size-base;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            width: 100%;
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+
+    // Cards
+    .card {
+        padding: $spacing-lg;
+    }
+
+    .service-card .service-content {
+        padding: $spacing-lg;
+    }
+
+    // Feature boxes
+    .feature-box {
+        padding: $spacing-lg;
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            font-size: $font-size-3xl;
+        }
+    }
+
+    // Forms
+    .btn {
+        width: 100%;
+    }
+
+    // Footer
+    .footer {
+        padding: $spacing-2xl 0 $spacing-lg;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+}
+
+// ========================================
+// TABLET RESPONSIVE STYLES
+// ========================================
+
+@include tablet-only {
+
+    // Grid adjustments
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // Hero
+    .hero {
+        min-height: 550px;
+    }
+}
+
+// ========================================
+// DESKTOP RESPONSIVE STYLES
+// ========================================
+
+@include desktop {
+
+    // Container
+    .container {
+        padding: 0 $spacing-xl;
+    }
+
+    // Section spacing
+    section {
+        padding: $spacing-4xl 0;
+    }
+
+    // Hero
+    .hero {
+        min-height: 700px;
+    }
+
+    // Navigation hover effects
+    .nav a {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: $primary-color;
+            transition: all $transition-base;
+            transform: translateX(-50%);
+        }
+
+
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .card {
+        margin-bottom: $spacing-6;
+    }
+
+    .footer-grid {
+        gap: $spacing-8;
+    }
+}
+
+// ==========================================
+// Print Styles
+// ==========================================
+@media print {
+
+    .header,
+    .footer,
+    .mobile-menu-toggle,
+    .hero-buttons {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        border-width: $border-width-thick;
+    }
+}
+
+// ========================================
+// DARK MODE SUPPORT (Optional)
+// ========================================
+
+@media (prefers-color-scheme: dark) {
+    // Uncomment to enable dark mode support
+    /*
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  .header {
+    background-color: #2a2a2a;
+  }
+  
+  .card,
+  .feature-box,
+  .service-card {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+  }
+  
+  input,
+  textarea,
+  select {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #444;
+  }
+  */
+}

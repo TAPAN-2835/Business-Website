@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get in touch with Business Solutions. Contact us for web development, digital marketing, and consulting services. We're here to help your business succeed.">
+    <meta name="keywords" content="contact us, get in touch, business inquiry, consultation request">
+    <meta name="author" content="Business Solutions">
+    <title>Contact Us - Business Solutions | Get In Touch</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Business Solutions Home">
+                Business<span>Solutions</span>
+            </a>
+
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <div class="nav-list">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+                </div>
+            </nav>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Hero -->
+        <section class="hero" style="min-height: 400px;" aria-labelledby="contact-hero-heading">
+            <div class="container">
+                <h1 id="contact-hero-heading">Get In Touch</h1>
+                <p>Have a project in mind? We'd love to hear from you. Let's discuss how we can help your business grow.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form & Info Section -->
+        <section class="section-padding" aria-labelledby="contact-main-heading">
+            <div class="container">
+                <div class="grid-2">
+                    <!-- Contact Form -->
+                    <div class="reveal">
+                        <h2 id="contact-main-heading">Send Us a Message</h2>
+                        <p style="margin-bottom: 32px;">Fill out the form below and we'll get back to you within 24
+                            hours.</p>
+
+                        <!-- Success Message -->
+                        <div class="alert alert-success" id="formSuccess" role="alert">
+                            <strong>Success!</strong> Your message has been sent successfully. We'll get back to you
+                            soon.
+                        </div>
+
+                        <form id="contactForm" novalidate class="contact-form">
+                            <div class="form-group">
+                                <label for="name">
+                                    Full Name <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required
+                                    aria-required="true" aria-describedby="nameError">
+                                <small class="error-message" id="nameError" role="alert">Please enter your full
+                                    name</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    Email Address <span class="required" aria-label="required">*</span>
+                                </label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required
+                                    aria-required="true" aria-describedby="emailError">
+                                <small class="error-message" id="emailError" role="alert">Please enter a valid email
+                                    address</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567"
+                                    aria-describedby="phoneError">
+                                <small class="error-message" id="phoneError" role="alert"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">
+                                    Subject <span class="required" aria-label="required">*</span>
+                                </label>
+                                <select id="subject" name="subject" required aria-required="true"
+                                    aria-describedby="subjectError">
+                                    <option value="">Select a subject</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="consulting">Business Consulting</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="support">Support</option>
+                                </select>
+                                <small class="error-message" id="subjectError" role="alert">Please select a
+                                    subject</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">
+                                    Message <span class="required" aria-label="required">*</span>
+                                </label>
+                                <textarea id="message" name="message"
+                                    placeholder="Tell us about your project or inquiry..." required aria-required="true"
+                                    aria-describedby="messageError"></textarea>
+                                <small class="error-message" id="messageError" role="alert">Please enter your
+                                    message</small>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full btn-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="reveal">
+                        <h2>Contact Information</h2>
+                        <p style="margin-bottom: 32px;">Prefer to reach out directly? Here's how you can contact us.</p>
+
+                        <div class="grid-1" style="display: grid; gap: 24px;">
+                            <div class="card"
+                                style="flex-direction: row; align-items: center; gap: 24px; padding: 24px;">
+                                <div style="font-size: 24px;">📧</div>
+                                <div>
+                                    <h4>Email Us</h4>
+                                    <p style="margin: 0;"><a
+                                            href="mailto:info@businesssolutions.com">info@businesssolutions.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="card"
+                                style="flex-direction: row; align-items: center; gap: 24px; padding: 24px;">
+                                <div style="font-size: 24px;">📞</div>
+                                <div>
+                                    <h4>Call Us</h4>
+                                    <p style="margin: 0;"><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                                </div>
+                            </div>
+
+                            <div class="card"
+                                style="flex-direction: row; align-items: center; gap: 24px; padding: 24px;">
+                                <div style="font-size: 24px;">📍</div>
+                                <div>
+                                    <h4>Visit Us</h4>
+                                    <p style="margin: 0;">123 Business Street, Suite 100<br>City, State 12345</p>
+                                </div>
+                            </div>
+
+                            <div class="card"
+                                style="flex-direction: row; align-items: center; gap: 24px; padding: 24px;">
+                                <div style="font-size: 24px;">🕐</div>
+                                <div>
+                                    <h4>Business Hours</h4>
+                                    <p style="margin: 0;">Mon-Fri: 9AM - 6PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div style="margin-top: 48px;">
+                            <h3>Follow Us</h3>
+                            <div style="display: flex; gap: 16px; margin-top: 16px;">
+                                <a href="#" class="btn btn-outline" aria-label="Follow us on LinkedIn">LinkedIn</a>
+                                <a href="#" class="btn btn-outline" aria-label="Follow us on Twitter">Twitter</a>
+                                <a href="#" class="btn btn-outline" aria-label="Follow us on Instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section aria-labelledby="map-heading">
+            <div
+                style="width: 100%; height: 400px; background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%); display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center; padding: 32px;">
+                    <h3 id="map-heading" style="color: #666; margin-bottom: 16px;">📍 Our Location</h3>
+                    <p style="color: #999;">Interactive map would be embedded here</p>
+                    <p style="color: #999; font-size: 0.875rem;">123 Business Street, Suite 100, City, State 12345</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding" aria-labelledby="faq-heading">
+            <div class="container">
+                <div class="text-center mb-8">
+                    <h2 id="faq-heading">Frequently Asked Questions</h2>
+                    <p>Quick answers to common questions about our services.</p>
+                </div>
+
+                <div class="grid-2 reveal">
+                    <details class="faq-item">
+                        <summary>How long does a typical project take?</summary>
+                        <p>Project timelines vary based on scope and complexity. A basic website typically takes 2-4
+                            weeks, while more complex applications may take 2-3 months.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What is your pricing structure?</summary>
+                        <p>We offer flexible pricing options. We can work with hourly rates or fixed-bid projects
+                            depending on your preference and project clarity.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do you provide ongoing support?</summary>
+                        <p>Yes, we offer maintenance packages to ensure your website remains secure and up-to-date after
+                            launch.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can you work with our existing branding?</summary>
+                        <p>Absolutely. We will adhere to your brand guidelines to ensure consistency across all digital
+                            assets.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" aria-labelledby="cta-heading">
+            <div class="container">
+                <h2 id="cta-heading">Let's Build Something Amazing Together</h2>
+                <p>Your success is our mission. Reach out today and let's start your digital transformation journey.</p>
+                <a href="#contactForm" class="btn btn-outline btn-lg" style="color: white; border-color: white;">Fill
+                    Out the Form</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>Business Solutions</h4>
+                    <p>Transforming businesses through innovative digital solutions and strategic consulting.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Digital Marketing</a></li>
+                        <li><a href="services.html">Business Consulting</a></li>
+                        <li><a href="services.html">Brand Strategy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>Email: info@businesssolutions.com</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Address: 123 Business St, Suite 100</li>
+                        <li>City, State 12345</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Business Solutions. All rights reserved. | Designed with ❤️ for excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+
+</html>

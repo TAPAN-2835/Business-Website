@@ -1,0 +1,324 @@
+// _components.scss
+@import 'variables';
+@import 'mixins';
+
+// ==========================================
+// Buttons
+// ==========================================
+.btn {
+    @include button-base;
+
+    &-primary {
+        @include button-variant($color-primary, $color-white);
+    }
+
+    &-secondary {
+        @include button-variant($color-secondary, $color-white);
+    }
+
+    &-outline {
+        @include button-outline($color-primary);
+    }
+
+    &-lg {
+        padding: $spacing-4 $spacing-8;
+        font-size: 1.125rem;
+    }
+
+    &-full {
+        width: 100%;
+        display: flex;
+    }
+}
+
+// ==========================================
+// Cards
+// ==========================================
+.card {
+    @include card-base;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.feature-box {
+    @include card-base;
+    text-align: center;
+    padding: $spacing-8 $spacing-6;
+
+    .icon {
+        font-size: 3rem;
+        margin-bottom: $spacing-6;
+        color: $color-primary;
+        display: inline-block;
+        transition: $transition-base;
+    }
+
+    &:hover .icon {
+        transform: scale(1.1);
+        color: $color-primary-dark;
+    }
+
+    h3 {
+        margin-bottom: $spacing-4;
+    }
+}
+
+.service-card {
+    @include card-base;
+    overflow: hidden;
+    padding: 0;
+
+    .card-image {
+        height: 200px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: $transition-slow;
+        }
+    }
+
+    .card-content {
+        padding: $spacing-6;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        h3 {
+            margin-bottom: $spacing-3;
+        }
+
+        p {
+            color: $color-text-light;
+            margin-bottom: $spacing-4;
+        }
+    }
+
+    &:hover .card-image img {
+        transform: scale(1.05);
+    }
+}
+
+.team-card {
+    @include card-base;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+
+    .member-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-bottom: 1px solid $color-border;
+    }
+
+    .member-info {
+        padding: $spacing-6;
+    }
+
+    .role {
+        color: $color-primary;
+        font-weight: $font-weight-medium;
+        margin-bottom: $spacing-2;
+        display: block;
+    }
+}
+
+// ==========================================
+// Forms
+// ==========================================
+.contact-form {
+    background-color: $color-white;
+    padding: $spacing-8;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-lg;
+
+    .form-group {
+        margin-bottom: $spacing-6;
+        position: relative;
+    }
+
+    label {
+        display: block;
+        margin-bottom: $spacing-2;
+        font-weight: $font-weight-medium;
+        color: $color-gray-700;
+
+        .required {
+            color: $color-error;
+        }
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        padding: $spacing-3 $spacing-4;
+        border: 1px solid $color-gray-300;
+        border-radius: $border-radius-md;
+        transition: $transition-fast;
+        background-color: $color-gray-50;
+
+        &:focus {
+            outline: none;
+            border-color: $color-primary;
+            box-shadow: 0 0 0 3px rgba($color-primary, 0.1);
+            background-color: $color-white;
+        }
+
+        &.error {
+            border-color: $color-error;
+            background-color: rgba($color-error, 0.02);
+        }
+
+        &.success {
+            border-color: $color-success;
+        }
+    }
+
+    small.error-message {
+        color: $color-error;
+        font-size: 0.875rem;
+        margin-top: $spacing-1;
+        display: none;
+
+        &.visible {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+    }
+
+    .char-count {
+        text-align: right;
+        font-size: 0.75rem;
+        color: $color-gray-500;
+        margin-top: $spacing-1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ==========================================
+// Stats Section
+// ==========================================
+.stat-item {
+    text-align: center;
+    padding: $spacing-6;
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: $font-weight-bold;
+        color: $color-primary;
+        display: block;
+        margin-bottom: $spacing-2;
+        line-height: 1;
+    }
+
+    p {
+        color: $color-gray-600;
+        font-weight: $font-weight-medium;
+        margin: 0;
+    }
+}
+
+// ==========================================
+// Alert / Messages
+// ==========================================
+.alert {
+    padding: $spacing-4;
+    border-radius: $border-radius-md;
+    margin-bottom: $spacing-6;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+
+    &-success {
+        background-color: rgba($color-success, 0.1);
+        color: darken($color-success, 20%);
+        border: 1px solid rgba($color-success, 0.2);
+    }
+
+    &-error {
+        background-color: rgba($color-error, 0.1);
+        color: darken($color-error, 20%);
+        border: 1px solid rgba($color-error, 0.2);
+    }
+}
+
+// ==========================================
+// FAQ Accordion
+// ==========================================
+.faq-item {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-md;
+    margin-bottom: $spacing-4;
+    overflow: hidden;
+
+    summary {
+        padding: $spacing-4 $spacing-6;
+        cursor: pointer;
+        font-weight: $font-weight-medium;
+        list-style: none;
+        position: relative;
+        padding-right: $spacing-12;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: '+';
+            position: absolute;
+            right: $spacing-6;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: $color-primary;
+        }
+    }
+
+    &[open] summary::after {
+        content: '-';
+    }
+
+    &[open] summary {
+        border-bottom: 1px solid $color-border;
+        background-color: $color-gray-50;
+    }
+
+    p {
+        padding: $spacing-4 $spacing-6;
+        margin: 0;
+        color: $color-text-light;
+    }
+}
+
+// ==========================================
+// Scroll Reveal Animation
+// ==========================================
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
