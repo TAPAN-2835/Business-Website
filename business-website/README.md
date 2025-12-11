@@ -112,11 +112,14 @@ Throughout this project, I demonstrated mastery of several key frontend concepts
 
 ## 🎨 Screenshots
 
-![Hero Section](images/optimized/hero_business_background_1765426582104.png)
-*Modern hero section with clear call-to-action*
+<img width="1350" height="637" alt="image" src="https://github.com/user-attachments/assets/7d153537-47c9-4c43-b5f7-577337d4d6c4" />
 
-![Services Grid](images/optimized/web_development_service_1765426599932.png)
-*Responsive services grid layout*
+Modern hero section with clear call-to-action
+
+<img width="1351" height="636" alt="image" src="https://github.com/user-attachments/assets/8822e769-a0c0-4235-8795-549534a0de90" />
+
+Responsive services grid layout
 
 ---
 © 2025 Business Solutions. All Rights Reserved.
+
